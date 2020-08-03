@@ -1,0 +1,59 @@
+.bb-page-not-found {
+    position: relative;
+    background-image: url('../../images/van.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-position: center;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color-2,.3);
+    }
+
+    &__title {
+        color: $color-white;
+        text-align:center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: $font-family-2-r;
+        line-height: 1;
+        z-index: 1;
+    }
+
+    &__number {
+        font-size: 35rem;
+        display: block;
+        @include respond(t-m) {
+            font-size: 25rem;
+        }
+
+        @include respond(p-xl) {
+            font-size: 15rem;
+        }
+    }
+
+    &__text {
+        display: block;
+        font-size: 10rem;
+        margin-bottom: 5.5rem;
+        @include respond(t-m) {
+            font-size: 5rem;
+        }
+
+        @include respond(p-xl) {
+            font-size: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+}

@@ -1,8 +1,8 @@
 import React from "react";
 import useType from "../hooks/useType";
-import { filterTypeOfSeries } from "../utils/util";
+import { filterTypeOfSeries } from "../utils/utils";
 import { Link } from "react-router-dom";
-import { AiOutlinePlus } from "react-icons/ai";
+import { FaArrowRight } from "react-icons/fa";
 import Loader from "./Loader";
 
 function Characters({ type, page }) {
@@ -34,7 +34,7 @@ function Characters({ type, page }) {
 
                 return (
                   <li className="bb-characters__item" key={char_id}>
-                    <img className="bb-characters__img" src={img} />
+                    <img className="bb-characters__img" src={img} alt={name}/>
                     <h2 className="bb-characters__name">
                       <span className="bb-characters__firstname">
                         {firstName}
@@ -49,7 +49,7 @@ function Characters({ type, page }) {
                       className="bb-characters__bg"
                       to={`/characters/${char_id}`}
                     >
-                      <AiOutlinePlus className="bb-characters__icon" />
+                      <FaArrowRight className="bb-characters__icon"/>
                     </Link>
                   </li>
                 );

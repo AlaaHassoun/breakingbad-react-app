@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import useType from "../hooks/useType";
 import Layout from "./Layout";
 import seImg from "../images/ww-jp-3.png";
@@ -54,7 +54,7 @@ function SingleEpisode() {
                         <li className="bb-episode__item">
                           <h2 className="bb-episode__title">characters :</h2>
                           {characters.map((character, index) => (
-                              <p className="bb-episode__description">
+                              <p className="bb-episode__description" key={index}>
                                 {character}
                               </p>
                           ))}

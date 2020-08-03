@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from "react";
+import { useEffect, useReducer } from "react";
 
 const API = "https://www.breakingbadapi.com/api";
 
