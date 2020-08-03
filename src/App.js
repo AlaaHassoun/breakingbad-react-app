@@ -8,6 +8,7 @@ const EpisodesPage = React.lazy(() => import("./components/EpisodesPage"));
 const SingleEpisode = React.lazy(() => import("./components/SingleEpisode"));
 const QuotesPage = React.lazy(() => import("./components/QuotesPage"));
 const DeathsPage = React.lazy(() => import("./components/DeathsPage"));
+const PageNotFound = React.lazy(() => import("./components/PageNotFound"));
 
 function Loading() {
   return <p>Loading...</p>;
@@ -47,7 +48,9 @@ function App() {
               <SingleEpisode />
             </Route>
 
-            <Route path="*">{() => <p>404 page</p>}</Route>
+            <Route path="*">
+              <PageNotFound/>
+            </Route>
           </Switch>
         </React.Suspense>
       </div>

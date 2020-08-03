@@ -1,6 +1,6 @@
 import React from "react";
 import useType from "../hooks/useType";
-import { filterTypeOfSeries } from "../utils/util";
+import { filterTypeOfSeries } from "../utils/utils";
 import Loader from "./Loader";
 import Accordion from "./Accordion";
 
