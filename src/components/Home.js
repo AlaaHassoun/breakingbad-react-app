@@ -1,7 +1,7 @@
 import React from "react";
 import CharactersHomeBlock from "./CharactersHomeBlock";
 import Layout from "./Layout";
-import homeBg from '../images/ww-jp.jpg';
+import homeBg from '../images/ww-jp.webp';
 import StatisticsBlock from "./StatisticsBlock";
 import QuoteBlock from "./QuoteBlock";
 

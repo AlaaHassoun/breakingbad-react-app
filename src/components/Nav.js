@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouteMatch, Link } from "react-router-dom";
-import logo from "../images/logobb-w.png";
+import logo from "../images/logobb-w.webp";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
