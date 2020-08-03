@@ -2,7 +2,7 @@
 [Check Out The Documentation](https://breakingbadapi.com/documentation)
 
 ## Project
-You can view the final project at https://hopeful-volhard-1cb617.netlify.app/
+You can view the final project at https://breakingbad-react-app.netlify.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
