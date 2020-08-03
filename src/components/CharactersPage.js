@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "./Layout";
 import Characters from "./Characters";
-import castImg from '../images/cast.jpg';
+import castImg from '../images/cast.webp';
 
 function CharactersPage() {
 

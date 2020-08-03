@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "./Layout";
 import Quotes from "./Quotes";
-import qImg from "../images/ww-jp-2.jpg";
+import qImg from "../images/ww-jp-2.webp";
 
 function QuotesPage() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "./Layout";
 import Deaths from "./Deaths";
-import dImg from "../images/ww-jp-6.jpg";
+import dImg from "../images/ww-jp-6.webp";
 
 function DeathsPage() {
   return (

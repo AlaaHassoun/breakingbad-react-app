@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "./Layout";
 import Episodes from "./Episodes";
-import eImg from "../images/ww-jp-7.jpg";
+import eImg from "../images/ww-jp-7.webp";
 
 function EpisodesPage() {
   return (

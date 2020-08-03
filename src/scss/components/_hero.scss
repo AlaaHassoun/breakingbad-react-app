@@ -36,6 +36,7 @@
         height: 200px;
         background: linear-gradient(360deg, $color-2, transparent);
         content: '';
+        z-index: -1;
     }
 
     &__container {

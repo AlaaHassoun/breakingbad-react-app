@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import useType from "../hooks/useType";
 import Layout from "./Layout";
-import seImg from "../images/ww-jp-3.png";
+import seImg from "../images/ww-jp-3.webp";
 import Loader from "./Loader";
 
 function SingleEpisode() {
