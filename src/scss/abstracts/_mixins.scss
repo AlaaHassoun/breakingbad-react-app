@@ -1,0 +1,120 @@
+// CLEARFIX
+@mixin clearFix {
+    &::after {
+        content:"";
+        display: table;
+        clear:both;
+    }
+}
+;
+
+// Center H & V
+@mixin centerHV {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+
+// MEDIA QUERIES (BREAK POINTS)
+// MEDIA QUERY MANAGER
+/*
+
+0 - 320px      : Phone Small / p-s
+320px - 400px  : Phone Medium / p-m
+400px - 480px  : Phone Large / p-l
+480px - 560px  : Phone Extra Large / p-xl
+
+560px - 640px  : Tablet Small / t-s
+640px - 768px  : Tablet Medium / t-m
+768px - 992px  : Tablet Large  / t-l
+992px - 1024px : Tablet Extra Large  / t-xl
+
+1024px - 1136px : Desktop Small / d-s
+1136px - 1200px : Desktop Medium / d-m
+1200px - 1360px : Desktop Large / d-l
+1360px - 1440px : Desktop Extra Large / d-xl
+> 1440px (Big desktop (1800) is where our normal styles apply (Large Devices, Wide Screens) : Desktop Extra Large / d-xxl
+
+
+$breakpoint argument choices:
+Phone :
+- p-s
+- p-m
+- p-l
+- p-xl
+
+Tablet :
+- t-s
+- t-m
+- t-l
+- t-xl
+
+Desktop :
+- d-s
+- d-m
+- d-l
+- d-xl
+- d-xxl
+
+
+ORDER : Base + typography > general layout + grid > page layout > components
+*/
+
+@mixin respond($breakpoint) {
+    
+  @if $breakpoint == p-s {
+      @media only screen and (max-width: 20em) { @content }; //  320px --> 320/ 16(default font size in browser) and 1em = 16px
+  }
+
+  @if $breakpoint == p-m {
+      @media only screen and (max-width: 25em) { @content }; //  < 400px 
+  }
+
+  @if $breakpoint == p-l {
+      @media only screen and (max-width: 30em) { @content }; // < 480px 
+  }
+
+  @if $breakpoint == p-xl {
+      @media only screen and (max-width: 35em) { @content }; // < 560px 
+  }
+
+  @if $breakpoint == t-s {
+      @media only screen and (max-width: 40em) { @content }; // < 640px 
+  }
+
+  @if $breakpoint == t-m {
+      @media only screen and (max-width: 48em) { @content }; // < 768px 
+  }
+
+  @if $breakpoint == t-l {
+      @media only screen and (max-width: 62em) { @content }; // < 992px 
+  }
+
+  @if $breakpoint == t-xl {
+      @media only screen and (max-width: 64em) { @content }; // < 1024px 
+  }
+
+  @if $breakpoint == d-s {
+      @media only screen and (max-width: 71em) { @content }; // < 1136px 
+  }
+
+  @if $breakpoint == d-m {
+      @media only screen and (max-width: 75em) { @content }; // < 1200px 
+  }
+
+  @if $breakpoint == d-l {
+      @media only screen and (max-width: 85em) { @content }; // < 1360px 
+  }
+
+  @if $breakpoint == d-xl {
+      @media only screen and (max-width: 90em) { @content }; // < 1440px 
+  }
+
+  @if $breakpoint == d-xxl {
+      @media only screen and (min-width: 90em) { @content }; // > 1440px
+  }
+
+}
+

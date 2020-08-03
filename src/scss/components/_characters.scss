@@ -1,0 +1,109 @@
+.bb-characters {
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 8.1rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4.5rem;
+    width: 100%;
+
+    @include respond(t-l) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    height: 70rem;
+    cursor: pointer;
+    overflow: hidden;
+
+
+    @include respond(t-l) {
+      height: 50rem;
+    }
+
+    @include respond(p-l) {
+      height: 40rem;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &__name {
+    position: absolute;
+    left: 5.5rem;
+    bottom: 5.5rem;
+    padding-left: 2rem;
+    z-index: 1;
+
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      width: 0.4rem;
+      height: 8rem;
+      background-color: $color-1;
+    }
+  }
+
+  &__firstname,
+  &__lastname {
+    display: block;
+    font-size: 3.906rem;
+    color: $color-white;
+    line-height: 1;
+
+
+    @include respond(p-l) {
+      font-size: 2.906rem;
+    }
+  }
+
+  &__bg {
+    &:link,
+    &:visited {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color-2, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(-600px);
+      transition: transform 0.3s ease-out;
+    }
+  }
+
+  &__icon {
+    font-size: 7rem;
+    color: $color-white;
+    z-index: 1;
+  }
+
+
+  &__item:hover > &__bg {
+    transform: translateX(0);
+  }
+}

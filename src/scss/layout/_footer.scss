@@ -1,0 +1,51 @@
+.bb-footer {
+  background-color: $color-2;
+  width: 100%;
+
+
+  &__container {
+    position: relative;
+    padding: 2.6rem 0;
+    
+    &::before {
+        content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $color-1;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(t-s) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    color: $color-white;
+    font-size: 1.6rem;
+    font-family: $font-family-2-r;
+    text-align: center;
+    &:not(:last-child) {
+      @include respond(t-s) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      color: $color-white;
+    }
+  }
+}

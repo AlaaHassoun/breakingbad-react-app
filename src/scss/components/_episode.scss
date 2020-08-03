@@ -1,0 +1,62 @@
+.bb-episode {
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__title {
+    text-transform: capitalize;
+    font-size: 4.104rem;
+    color: $color-white;
+    position: relative;
+    margin-bottom: 1.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 8rem;
+      height: 0.4rem;
+      background-color: $color-1;
+    }
+  }
+
+  &__description {
+    display: block;
+    text-transform: capitalize;
+    font-size: 2.906rem;
+    color: $color-white;
+    text-align: center;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: block;
+      text-decoration: none;
+    }
+  }
+}

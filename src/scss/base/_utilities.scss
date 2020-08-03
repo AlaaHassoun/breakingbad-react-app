@@ -1,0 +1,90 @@
+.bb-section {
+    background-color: $color-2;
+    width: 100%;
+    padding: 11.6rem 0;
+
+    @include respond(p-l) {
+        padding: 5rem 0;
+    }
+}
+
+.bb-container {
+    width: 87.656vw;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.bb-link {
+    &:link,
+    &:visited {
+        position: relative;
+        font-size: 1.6rem;
+        color: $color-white;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 2.1rem 6.1rem;
+        display: inline-block;
+        border: 4px solid $color-1;
+        overflow: hidden;
+        transition: color .3s ease-in-out;
+        z-index: 2;
+
+        @include respond(d-xl) {
+            font-size: 1.4rem;
+            padding: 2.1rem 4.1rem;
+        }
+
+        @include respond(t-s) {
+            padding: 1.8rem 2.5rem;
+        }
+
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        width: 0;
+        height: 100%;
+        background-color: $color-1;
+        transition: width .3s ease-in-out ;
+        z-index: -1;
+    }
+
+    &::before {
+        left: 0;
+    }
+
+    &:hover {
+        &:link,
+        &:visited {
+            color: $color-2;
+        }
+
+        &::before {
+            width: 100%;
+        }
+    }
+
+    &--no-border {
+        &:link,
+        &:visited {
+            border: 4px solid transparent;
+        }
+
+        &::before {
+            display: none;
+        }
+
+        &:hover {
+            &:link,
+            &:visited {
+                color: $color-1;
+            }
+        }
+    }
+}
+
+.bb-overflow-h {
+    overflow:  hidden !important;
+}

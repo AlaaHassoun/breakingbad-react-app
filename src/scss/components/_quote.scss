@@ -1,0 +1,59 @@
+.bb-quote {
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__quote {
+        margin: 8.1rem 0;
+        font-size: 4.883rem;
+        color: $color-white;
+        text-align: center;
+        position: relative;
+
+        @include respond(t-s) {
+          font-size: 3.883rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    
+        @include respond(p-xl) {
+          font-size: 2.883rem;
+        }
+    }
+    
+      &__icon {
+        font-size: 6rem;
+        color: $color-1;
+        display: inline-block;
+    
+        &--left {
+            transform: rotate(180deg);
+            margin-right: 2rem;
+            @include respond(t-s) {
+              align-self: flex-start;
+            }
+        }
+    
+        &--right {
+            margin-left: 2rem;
+            @include respond(t-s) {
+              align-self: flex-start;
+            }
+        }
+      }
+    
+      &__author {
+        font-size: 2rem;
+        color: $color-white;
+        position: relative;
+        padding-bottom: 1rem;
+        display: block;
+        margin-top: auto;
+    
+      }
+}

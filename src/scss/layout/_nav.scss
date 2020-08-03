@@ -1,0 +1,138 @@
+.bb-header {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        width: 122px;
+    }
+
+    &__nav {
+        margin-left: auto;
+        @include respond(t-l) {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: $color-2;
+            transform: translateX(100rem);
+            transition: transform .3s ease-in-out;
+            z-index: 50;
+        }
+
+        &--open {
+            @include respond(t-l) {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+        @include respond(t-l) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 55px;
+            @include respond(t-l) {
+                margin-right: 0;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            position: relative;
+            text-decoration: none;
+            font-size: 20px;
+            color: $color-white;
+
+            @include respond(t-l) {
+                font-size: 2.5rem;
+            }
+        }
+
+        &--active {
+            &:link,
+            &:visited {
+                color: $color-1;
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            width: 0;
+            height: .4rem;
+            background-color: $color-1;
+            transition: width .3s ease-in-out;
+        }
+
+        &:hover {
+
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+
+    &__toggle-btn {
+        position: relative;
+        width: 4.5rem;
+        height: 1.8rem;
+        display: none;
+        z-index: 100;
+
+        @include respond(t-l) {
+            display: block;
+            margin-left: auto;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            width: 100%;
+            height: .4rem;
+            background-color: $color-1;
+            transform: rotate(0);
+            transition: transform .3s ease-in-out;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        &--open {
+            &::before {
+                top: 50%;
+                transform: rotate(45deg);
+            }
+    
+            &::after {
+                transform: rotate(-45deg);
+                bottom: 24%;
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.bb-statistics {
+  background-color: $color-1;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @include respond(t-l) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      @include respond(t-l) {
+        margin-bottom: 1.5rem;
+      }
+    } 
+
+  }
+
+  &__count {
+    font-size: 3.906rem;
+    color: $color-white;
+  }
+
+  &__divider {
+    width: 8rem;
+    height: .4rem;
+    background-color: $color-2;
+    margin: 1.5rem 0;
+
+    @include respond(t-l) {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-size: 3.906rem;
+    color: $color-white;
+    text-transform: uppercase;
+    position: relative;
+
+    @include respond(t-l) {
+      padding: 2rem 0;
+    }
+
+    @include respond(p-l) {
+      font-size: 2.906rem;
+    }
+
+    &::before {
+      @include respond(t-l) {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 8rem;
+        height: .4rem;
+        background-color: $color-2;
+      }
+    }
+
+
+  }
+}

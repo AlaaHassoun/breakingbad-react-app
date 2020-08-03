@@ -1,3 +1,9 @@
+## Breaking Bad API
+[Check Out The Documentation](https://breakingbadapi.com/documentation)
+
+## Project
+You can view the final project at https://amazing-lamarr-579a30.netlify.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

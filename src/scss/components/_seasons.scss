@@ -1,0 +1,105 @@
+.bb-seasons {
+
+    &__content {
+        width: 100%;
+    }
+
+    &__season-wrapper {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__season-number {
+        width: 100%;
+        padding: 3rem 6.1rem;
+        border: 1px solid rgba($color-white ,.8);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include respond(t-m) {
+            padding: 2rem ;  
+        }
+
+    }
+
+    &__season-title {
+        display: block;
+        color: $color-white;
+        font-size: 4.883rem;
+        text-transform: uppercase;
+
+        @include respond(t-m) {
+         font-size: 2.883rem;   
+        }
+
+    }
+
+    &__arrow-icon {
+        display: block;
+        color: $color-1;
+        font-size: 3rem;
+        cursor: pointer;
+
+        @include respond(t-m) {
+            font-size: 2rem;
+        }
+    }
+
+    &__list {
+        display: block;
+        list-style: none;
+        padding: 4rem 10rem;
+
+        @include respond(t-m) {
+            padding: 4rem ;
+        }
+
+        @include respond(t-s) {
+            padding: 2rem ;
+        }
+
+        &--d-none {
+            display: none;
+        }
+    }
+
+    &__item {
+        border-bottom: 1px solid rgba($color-white, .1);
+        padding-bottom: 1.5rem;
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__sub-title {
+        display: block;
+        color: $color-white;
+        font-size: 3.906rem; 
+        text-transform: capitalize;
+        position: relative;
+        font-weight: 300;
+
+        @include respond(t-m) {
+            font-size: 2.906rem; 
+        }
+
+        @include respond(p-xl) {
+            font-size: 1.906rem; 
+        }
+    }
+
+    &__icon {
+        display: block;
+        color: $color-1;
+        font-size: 3rem;
+        @include respond(t-m) {
+            font-size: 2rem;
+        }
+    }
+}

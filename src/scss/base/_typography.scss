@@ -1,0 +1,20 @@
+.bb-heading {
+    font-size: 4.883rem;
+    color: $color-white;
+    text-transform: uppercase;
+    position: relative;
+    @include respond(t-l) {
+      font-size: 3.901rem;
+  }
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      width: 8rem;
+      height: 0.4rem;
+      background-color: $color-1;
+    }
+}
+
